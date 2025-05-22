@@ -7,8 +7,8 @@
 # Department of Radiology, 
 # Boston Children's Hospital, Harvard Medical School
 
-# path to the example data sets 
-data=fetal_data/subject9/ksp 
+# path to the example data set 
+data=fetal_data/subject9/ksp_cc 
 READ=$(bart show -d0 $data)
 ne=35 # number of echos
 TR=68500

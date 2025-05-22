@@ -140,7 +140,7 @@ then
         bart moba -i30 -d4 -g -D -m6 -R3 --img_dims $((dimx/2)):$((dimx/2)):1 --kfilter-2 -o$overgrid -C150 -j0.001 \
         --normalize_scaling --scale_data 500 --scale_psf 500 \
 	--other pinit=1:$scaling_fat:$scaling_B0:1:1:1:1:1,pscale=1:$scaling_fat:$scaling_B0:1:1:1:1:1,echo=tmp-TE_moba-3e \
-	-B0.0 -b 220:32 --positive-maps $(bart bitmask 1) \
+	-B0.0 -b 44:16 --positive-maps $(bart bitmask 1) \
         -t tmp-TRAJ_moba-3e tmp-kdat_moba-3e TI-tmp reco-wf-3e2 sens-wf-3e2
 
         bart extract 6 0 1 reco-wf-3e2 water
