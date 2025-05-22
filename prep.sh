@@ -61,7 +61,6 @@ out_TE=$(readlink -f "$5")
 # Prepare data and traj
 #-----------------------------
 
-# bart transpose 2 13 $input temp_kdat1
 bart transpose 1  2 $input temp_kdat2
 bart transpose 0  1 temp_kdat2 KDAT0
 

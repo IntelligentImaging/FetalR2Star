@@ -73,7 +73,6 @@ reco=$(readlink -f "$5")
 sens=$(readlink -f "$6")
 
 lambda=$lambda
-# nframe=$nframe
 fB0_a=$fB0_a
 fB0_b=$fB0_b
 overgrid=$overgrid
@@ -118,7 +117,7 @@ dimx=`calc $dim*$overgrid`
 
 bart ones 6 $((dimx/2)) $((dimx/2)) 1 1 1 1 ones
 bart resize -c 0 $dimx 1 $dimx ones mask
-bart scale 0. mask R2s_mask # R1s for fat is larger
+bart scale 0. mask R2s_mask
 
 bart zeros 6 $dimx $dimx 1 1 1 1 zeros_mask
 
@@ -133,7 +132,6 @@ then
         bart extract 9 0 3 kdat_moba tmp-kdat_moba-3e
         bart extract 9 0 3 $TE tmp-TE_moba-3e
 
-        # extract stady-state data
         NSPK=$(bart show -d2 tmp-TRAJ_moba-3e)
         NFRM=$(bart show -d5 tmp-TRAJ_moba-3e)
 
@@ -149,7 +147,6 @@ then
         bart extract 6 1 2 reco-wf-3e2 fat
         bart extract 6 2 3 reco-wf-3e2 fB0
 
-        # bart scale 0.001 fB0 fB02
 	bart scale $(echo "scale=6; 1/$scaling_fat" | bc) fat fat2
 	bart scale $(echo "scale=6; 1/($scaling_B0*1000)" | bc) fB0 fB02 # *1000 becaue required in [1/ms]
 
@@ -157,7 +154,7 @@ then
 fi
 
 
-recon_type=9
+recon_type=7
 
 if (($init == 1));
 then
