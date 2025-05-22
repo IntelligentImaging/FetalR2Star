@@ -7,7 +7,8 @@
 # Department of Radiology, 
 # Boston Children's Hospital, Harvard Medical School
 
-data=data/subject3/ksp
+# path to the example data sets 
+data=fetal_data/subject9/ksp 
 READ=$(bart show -d0 $data)
 ne=35 # number of echos
 TR=68500
@@ -50,7 +51,7 @@ bart extract 6 3 4 reco_moba_reg${lambda}_np${SPOKES}_${NBR} reco_moba_reg${lamb
 
 python3 utils/save_maps.py reco_moba_reg${lambda}_np${SPOKES}_${NBR}_B0 RdBu_r -50 50 reco_moba_reg${lambda}_np${SPOKES}_${NBR}_B0.png 0
 
-# Extract and save R2* and B0 maps
+# Generate water and fat images
 bart rss $(bart bitmask 3) sens_moba_reg${lambda}_np${SPOKES} sens_rss
 bart resize -c 0 $NBR 1 $NBR sens_rss sens_rss_${NBR}
 bart extract 6 0 2 reco_moba_reg${lambda}_np${SPOKES}_${NBR} reco_moba_reg${lambda}_np${SPOKES}_${NBR}_W_F
