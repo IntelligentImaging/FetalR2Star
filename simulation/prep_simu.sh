@@ -85,7 +85,7 @@ bart traj -x $NSMP -y $NSPK -t$NMEA -r -D -E -G -s2 -e $((NECO-1)) -c tmp_traj1
 bart reshape $(bart bitmask 2 10) $NI 1 tmp_traj1 tmp_traj2
 
 bart scale 0.5 tmp_traj2 tmp_traj                          
-# bart phantom -k -s8 -T -b -t tmp_traj basis_geom
+bart phantom -k -s8 -T -b -t tmp_traj basis_geom
 
 TR1=$(echo "scale=4; $TR*0.000001" | bc)
 TE1=$(echo "scale=4; $TE*0.000001" | bc)
