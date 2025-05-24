@@ -21,3 +21,8 @@ If you experience any compatibility problems with later BART versions please let
 
 For running the reconstructions access to a GPU is recommended.
 If the CPU should be used, please remove `-g` flags from all `bart pics ...`, `bart nufft ...`, and `bart moba ...` calls.
+
+#### Example Results
+![Quantitative R2* maps and R2*-weighted images at TE = 70 ms for for a subject at 27.9 weeks gestational age](/fetal_data/SupportingInformationVideoS1.gif)
+
+![Quantitative R2* maps and R2*-weighted images at TE = 70 ms for for a subject at 35.6 weeks gestational age](/fetal_data/SupportingInformationVideoS2.gif)
