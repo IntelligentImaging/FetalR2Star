@@ -26,8 +26,7 @@ If the CPU should be used, please remove `-g` flags from all `bart pics ...`, `b
 <div style="text-align: center;">
   <figure style="display: inline-block;">
     <img src="/fetal_data/SupportingInformationVideoS1.gif" alt="27.9 weeks" width="400"/>
-    <figcaption style="margin-top: 6px;">
-    
+    <figcaption style="margin-top: 6px; \\">
       <em>Quantitative R2* maps (left) and R2*-weighted images (right) at TE = 70 ms for for a subject at 27.9 weeks gestational age</em>
     </figcaption>
   </figure>
@@ -36,8 +35,7 @@ If the CPU should be used, please remove `-g` flags from all `bart pics ...`, `b
 <div style="text-align: center;">
   <figure style="display: inline-block;">
     <img src="/fetal_data/SupportingInformationVideoS2.gif" alt="35.6 weeks" width="400"/>
-    <figcaption style="margin-top: 6px;">
-
+    <figcaption style="margin-top: 6px; \\">
       <em>Quantitative R2* maps (left) and R2*-weighted images (right) at TE = 70 ms for for a subject at 35.6 weeks gestational age</em>
     </figcaption>
   </figure>
