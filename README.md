@@ -7,7 +7,7 @@ This repository contains scripts to reproduce the results for the following work
 #### Rapid, High-resolution and Distortion-free R2* Mapping of Fetal Brain using Multi-echo Radial FLASH and Model-based Reconstruction
 > X Wang, H Fan, Z Tan, S Vasylechko, E Yang, R Didier, O Afacan, M Uecker, SK Warfield, A Gholipour
 >
-> Submitted to Magnetic Resonance in Medicine.
+> Accepted by Magnetic Resonance in Medicine.
 > 
 
 ## Requirements
