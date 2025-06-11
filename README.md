@@ -11,7 +11,7 @@ This repository contains scripts to reproduce the results for the following work
 > 
 
 ## Requirements
-This repository has been tested on Ubuntu 22.04.5 LTS, but is assumed to work on other Linux-based operating systems, too.
+This repository has been tested on Ubuntu 22.04.5 LTS, but is assumed to work on other Linux-based operating systems, too. Image export and display require Python and NumPy.
 
 #### Scripts
 Pre-processing, reconstruction and post-processing is performed with the [BART toolbox](https://github.com/mrirecon/bart).
@@ -19,11 +19,13 @@ The provided scripts are compatible with commit `gefb1de8` or later.
 For running the reconstructions access to a GPU is recommended.
 If the CPU should be used, please remove `-g` flags from all `bart pics ...`, `bart nufft ...`, and `bart moba ...` calls.
 
-For the in-vivo example, simply run `bash run.sh`; For the simulations, navigate to the simulation folder (`cd simulation`) and run `bash run_simu.sh`.
+For the in-vivo example, simply run `bash run.sh`; For the simulations, navigate to the simulation folder (`cd simulation`) and run `bash run_simu.sh`. Alternatively, you can open the Jupyter notebook `FetalR2Star.ipynb` in Google Colab to reproduce one of the in-vivo results. 
 
 If you experience any compatibility problems with later BART versions, or need further help to run the scripts, please let us know!
 (xiaoqingwang2010@gmail.com or xiaoqing.wang@childrens.harvard.edu)
 
+#### Expected outputs
+The expected outputs include water, fat, and quantitative R2* and B0 maps of the simulated phantom and fetal brain, as shown in Figures 1 and 4, respectively.
 
 #### Example Results
 <div style="text-align: center;">
