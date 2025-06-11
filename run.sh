@@ -44,11 +44,9 @@ bart resize -c 0 $NBR 1 $NBR reco_moba_reg${lambda}_np${SPOKES} reco_moba_reg${l
 
 # Extract and save R2* and B0 maps
 bart extract 6 2 3 reco_moba_reg${lambda}_np${SPOKES}_${NBR} reco_moba_reg${lambda}_np${SPOKES}_${NBR}_r2star
-
 python3 utils/save_maps.py reco_moba_reg${lambda}_np${SPOKES}_${NBR}_r2star magma 0 30 reco_moba_reg${lambda}_np${SPOKES}_${NBR}_r2star.png
 
 bart extract 6 3 4 reco_moba_reg${lambda}_np${SPOKES}_${NBR} reco_moba_reg${lambda}_np${SPOKES}_${NBR}_B0
-
 python3 utils/save_maps.py reco_moba_reg${lambda}_np${SPOKES}_${NBR}_B0 RdBu_r -50 50 reco_moba_reg${lambda}_np${SPOKES}_${NBR}_B0.png 0
 
 # Generate water and fat images
@@ -57,6 +55,10 @@ bart resize -c 0 $NBR 1 $NBR sens_rss sens_rss_${NBR}
 bart extract 6 0 2 reco_moba_reg${lambda}_np${SPOKES}_${NBR} reco_moba_reg${lambda}_np${SPOKES}_${NBR}_W_F
 bart fmac reco_moba_reg${lambda}_np${SPOKES}_${NBR}_W_F sens_rss_${NBR} reco_moba_reg${lambda}_np${SPOKES}_${NBR}_W_F_rss
 
-# Join all parameter maps for Figure 5
-bart join 6 reco_moba_reg${lambda}_np${SPOKES}_${NBR}_W_F_rss reco_moba_reg${lambda}_np${SPOKES}_${NBR}_r2star reco_moba_reg${lambda}_np${SPOKES}_${NBR}_B0 reco_moba_reg${lambda}_np${SPOKES}_${NBR}_all_maps
+# Scale water and fat images for display
+bart scale 1e2 reco_moba_reg${lambda}_np${SPOKES}_${NBR}_W_F_rss reco_moba_reg${lambda}_np${SPOKES}_${NBR}_W_F_rss2
 
+# Join all parameter maps for Figure 4 (A)
+bart join 6 reco_moba_reg${lambda}_np${SPOKES}_${NBR}_W_F_rss2 reco_moba_reg${lambda}_np${SPOKES}_${NBR}_r2star reco_moba_reg${lambda}_np${SPOKES}_${NBR}_B0 reco_moba_reg${lambda}_np${SPOKES}_${NBR}_all_maps
+bart flip $(bart bitmask 0 1) reco_moba_reg${lambda}_np${SPOKES}_${NBR}_all_maps reco_moba_reg${lambda}_np${SPOKES}_${NBR}_all_maps_final
+bart reshape $(bart bitmask 1 6) 896 1 reco_moba_reg${lambda}_np${SPOKES}_${NBR}_all_maps_final reco_moba_reg${lambda}_np${SPOKES}_${NBR}_all_maps_final2
