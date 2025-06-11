@@ -28,8 +28,8 @@ scaling_fB0=0.03
 noise_level=300 # relative noise level
 
 
-for noise_level in 50 300 3000
-do    
+for noise_level in 50 300 2000
+do      
         bash ./prep_simu.sh -S$READ -E$ne -T$TR -G$GA -f$SPOKES -M$nkframe -n$noise_level data_noise$noise_level traj TI TE
         
         bart cc -p2 -A data_noise$noise_level data_2c_noise$noise_level
