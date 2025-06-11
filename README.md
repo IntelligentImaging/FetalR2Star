@@ -16,11 +16,14 @@ This repository has been tested on Ubuntu 22.04.5 LTS, but is assumed to work on
 #### Scripts
 Pre-processing, reconstruction and post-processing is performed with the [BART toolbox](https://github.com/mrirecon/bart).
 The provided scripts are compatible with commit `gefb1de8` or later.
-If you experience any compatibility problems with later BART versions please let us know!
-(xiaoqingwang2010@gmail.com or xiaoqing.wang@childrens.harvard.edu)
-
 For running the reconstructions access to a GPU is recommended.
 If the CPU should be used, please remove `-g` flags from all `bart pics ...`, `bart nufft ...`, and `bart moba ...` calls.
+
+For the in-vivo example, simply run `bash run.sh`; For the simulations, navigate to the simulation folder (`cd simulation`) and run `bash run_simu.sh`.
+
+If you experience any compatibility problems with later BART versions, or need further help to run the scripts, please let us know!
+(xiaoqingwang2010@gmail.com or xiaoqing.wang@childrens.harvard.edu)
+
 
 #### Example Results
 <div style="text-align: center;">
